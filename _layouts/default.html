@@ -3,11 +3,15 @@
   {% include head.html %}
   <body>
   <div class="page">
-    {% include header.html %}
+    {% comment %}
+      {% include header.html %}
+    {% endcomment %}
 
     {{ content }}
 
-    {% include footer.html %}
+    {% comment %}
+      {% include footer.html %}
+    {% endcomment %}
 
     {% comment %}
         {% include analytics.html %}
