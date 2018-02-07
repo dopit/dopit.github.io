@@ -2412,35 +2412,35 @@ amp-img {
 }
 
 .travel-img-icon-checkmark-purple {
-  background-image: url(../img/travel/icon/checkmark-purple.png);
+  background-image: url(/assets/images/icon/checkmark-purple.png);
 }
 
 .travel-img-icon-map-pin-outline-gray {
-  background-image: url(../img/travel/icon/map-pin-outline-gray.png);
+  background-image: url(/assets/images/icon/map-pin-outline-gray.png);
 }
 
 .travel-img-icon-map-pin-transparent {
-  background-image: url(../img/travel/icon/map-pin-transparent.png);
+  background-image: url(/assets/images/icon/map-pin-transparent.png);
 }
 
 .travel-img-icon-plane-landing-transparent {
-  background-image: url(../img/travel/icon/plane-landing-transparent.png);
+  background-image: url(/assets/images/icon/plane-landing-transparent.png);
 }
 
 .travel-img-icon-plane-taking-off-transparent {
-  background-image: url(../img/travel/icon/plane-taking-off-transparent.png);
+  background-image: url(/assets/images/icon/plane-taking-off-transparent.png);
 }
 
 .travel-img-icon-sad-face-gray {
-  background-image: url(../img/travel/icon/sad-face-gray.png);
+  background-image: url(/assets/images/icon/sad-face-gray.png);
 }
 
 .travel-img-icon-star-green {
-  background-image: url(../img/travel/icon/star-green.png);
+  background-image: url(/assets/images/icon/star-green.png);
 }
 
 .travel-img-icon-star-silver {
-  background-image: url(../img/travel/icon/star-silver.png);
+  background-image: url(/assets/images/icon/star-silver.png);
 }
 
 .travel-like-heart-solid {
@@ -3070,19 +3070,19 @@ amp-img {
   &:nth-child(1) {
     -webkit-animation: 18s g linear infinite;
     animation: 18s g linear infinite;
-    background: url(../img/travel/hero-2-preview.jpg) no-repeat 50% 50%;
+    background: url(/assets/images/hero-2-preview.jpg) no-repeat 50% 50%;
     background-size: cover;
   }
   &:nth-child(2) {
     -webkit-animation: 18s h linear 6s infinite;
     animation: 18s h linear 6s infinite;
-    background: url(../img/travel/hero-3-preview.jpg) no-repeat 50% 50%;
+    background: url(/assets/images/hero-3-preview.jpg) no-repeat 50% 50%;
     background-size: cover;
   }
   &:nth-child(3) {
     -webkit-animation: 18s i linear 12s infinite;
     animation: 18s i linear 12s infinite;
-    background: url(../img/travel/hero-1-preview.jpg) no-repeat 50% 50%;
+    background: url(/assets/images/hero-1-preview.jpg) no-repeat 50% 50%;
     background-size: cover;
   }
 }
