@@ -13,6 +13,7 @@ description: >
 logo: "/assets/images/beme-horiz-logo.png"
 logox2: "/assets/images/beme-horiz-logo@2x.png"
 logox3: "/assets/images/beme-horiz-logo@3x.png"
+logosvg: "/assets/images/beme-horiz-logo.svg"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dopit.github.io" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
