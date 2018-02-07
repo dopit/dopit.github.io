@@ -259,3 +259,17 @@ of the css and html from that theme as a starting point. Thanks!
 ## License
 
 MIT. See LICENSE file in repo.
+
+# Useful links
+
+[compatible css frameworks](https://softwarerecs.stackexchange.com/questions/46199/which-css-framework-is-compatible-with-amp)
+
+[AMP webdite builed](https://mobirise.com/amp-website-builder/)
+
+[AMP blog](http://ampexamples.com/)
+
+[Official Docs](https://www.ampproject.org)
+
+[AMP Examples](https://ampbyexample.com/)
+
+[Test AMP pages](https://search.google.com/test/amp)
