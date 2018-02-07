@@ -1,522 +1,1738 @@
-@import 'bourbon/bourbon';
-@import 'syntax-highlighting';
 
-$grey-color:       #828282;
+html
+  font-family: sans-serif
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
 
-.icon {
+body
+  margin: 0
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary
+  display: block
 
-        path {
-            fill: $grey-color;
-        }
-    }
-}
+audio, canvas, progress, video
+  display: inline-block
+  vertical-align: baseline
 
-amp-img {
-  background-color: grey;
-}
+audio:not([controls])
+  display: none
+  height: 0
 
-.cf {
-  @include clearfix;
-}
+[hidden], template
+  display: none
 
-$rs: 16px;
+a
+  background-color: transparent
+  &:active, &:hover
+    outline: 0
 
-$font-serif: Georgia,Cambria,"Times New Roman",Times,'Lora', serif;
-$font-sans: "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
+abbr[title]
+  border-bottom: 1px dotted
 
-@mixin respond-to($breakpoint) {
-  @media only screen and (max-width: $breakpoint + px) {
-    @content;
-  }
-}
+b, strong
+  font-weight: 700
 
-// Only needed for syntax highlighting
-%vertical-rhythm {
-  margin-bottom: $rs;
-}
+dfn
+  font-style: italic
 
-main {
-  display: block;
-}
+h1
+  font-size: 2em
+  margin: .67em 0
 
-body {
-  background-color: #fff;
-  font-family: $font-sans;
-  margin: 0;
-  padding: 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -webkit-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig";
-}
+mark
+  background: #ff0
+  color: #000
 
-.site-header {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 16px auto 0 auto;
-  @include box-sizing(border-box);
-  @include respond-to(800) {
-    padding: 0 $rs * 1;
-  }
+small
+  font-size: 80%
 
-  .page-links {
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: $rs;
-      font-weight: 200;
-      font-style: normal;
-      font-size: 18px;
-      line-height: 30px;
+sub
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
 
-      a {
-        text-decoration: none;
-        color: #999999;
-        &:hover {
-          color: #333333;
-        }
-      }
-  }
+sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+  top: -.5em
 
-}
+sub
+  bottom: -.25em
 
-.blog-header {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0;
-  @include box-sizing(border-box);
+img
+  border: 0
 
-  .blog-title {
-    margin-bottom: 8px;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: -2px;
-    outline: 0;
-    line-height: 50px;
-    word-break: break-word;
-    color: #333333;
-  }
-  .blog-description {
-    font-size: 28px;
-    margin: 0 0 20px;
-    padding: 0;
-    line-height: 1.2;
-    color: #666666;
-    font-weight: 300;
-  }
-}
+svg:not(:root)
+  overflow: hidden
 
-.content {
-  width: 100%;
-  max-width: 700px;
-  margin: 25px auto 0 auto;
-  @include box-sizing(border-box);
-  @include respond-to(800) {
-    padding: 0 $rs * 1;
-  }
+figure
+  margin: 1em 40px
 
-  article {
-    padding: 20px 0;
-    border-bottom: 1px solid #f2f2f0;
-    &:last-child {
-      border-bottom: 0px;
-    }
-    .post-title {
-      letter-spacing: -0.02em;
-      font-weight: 700;
-      font-style: normal;
-      display: block;
-      font-size: 36px;
-      line-height: 1.15;
-      margin: 0 0;
-      a {
-        text-decoration: none;
-        color: #333332;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    .post-excerpt {
-      letter-spacing: -0.02em;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 20px;
-      line-height: 1.59;
-      color: #666665;
-    }
-    .post-meta {
-      font-size: 14px;
-      color: #b3b3b1;
-      line-height: 30px;
-      a {
-        color: #b3b3b1;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
+hr
+  -webkit-box-sizing: content-box
+  box-sizing: content-box
+  height: 0
 
-.post-template .content {
-  max-width: 700px;
-}
+pre
+  overflow: auto
 
-.index-headline {
-  border-top: 1px solid #dededc;
-  margin: 0;
-  padding: 16px 0;
-  span {
-    color: #b3b3b1;
-    font-size: $rs / 8 * 5;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-}
+code, kbd, pre, samp
+  font-family: monospace,monospace
+  font-size: 1em
 
-.pagination {
-  text-align: center;
-  padding: $rs * 1 0 0;
-  font-size: $rs / 4 * 3;
-  a {
-    color: #999999;
-    text-decoration: none;
-    &:hover {
-      color: #333333;
-    }
-  }
-}
+button, input, optgroup, select, textarea
+  color: inherit
+  font: inherit
+  margin: 0
 
-.site-footer {
-  margin: 0 auto;
-  padding: $rs * 3 0;
-  width: 100%;
-  max-width: 700px;
-  font-size: $rs / 4 * 3;
-  text-align: center;
-  color: #999999;
-  line-height: $rs * 1.1;
-  a {
-    color: #666666;
-    text-decoration: none;
-    &:hover {
-      color: #333333;
-    }
-  }
-}
+button
+  overflow: visible
+  text-transform: none
 
-.post {
-  .post-meta {
-    font-family: $font-sans;
-  }
-  .post-title {
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: -0.04em;
-    font-size: 50px;
-    line-height: 1.1;
-    color: #333332;
-    margin-bottom: 50px;
-  }
-  .author-image {
-    background-image: url({{ site.baseurl }}{{site.author_image}});
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    margin-right: 8px;
-    margin-bottom: -10px;
-    float: left;
-    background-size: cover;
-    border-radius: 100%;
-    text-indent: -9999px;
-  }
-  .post-meta-text {
-    color: #b3b3b1;
-    letter-spacing: -0.02em;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    overflow: hidden;
-    font-family: $font-sans;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+select
+  text-transform: none
 
-  .post-content {
-    width: 100%;
-    font-family: $font-serif;
-    color: #333333;
-    h1, h2, h3 {
-      font-family: $font-sans;
-    }
-    h3, h4, h5, h6 {
-      letter-spacing: -0.02em;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 24px;
-      line-height: 1.3;
-      margin-top: 50px;
-      margin-bottom: 0px;
-      font-family: $font-sans;
-    }
-    h3 {
-      font-size: 36px;
-    }
-    h2, h1 {
-      letter-spacing: -0.02em;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 42px;
-      line-height: 1.2;
-      margin-top: 50px;
-      margin-bottom: 0px;
-    }
-    table {
-      border-collapse: collapse;
-    }
-    table, th, td {
-      border: 1px solid black;
-      padding: 5px;
-      text-align:left;
-    }
-    p {
-      font-weight: 400;
-      font-style: normal;
-      font-size: 22px;
-      line-height: 1.59;
-      letter-spacing: -.002em;
-      margin-top: 30px;
-      margin-bottom: 0;
-      color: #333333;
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      hyphens: auto;
-    }
-    a {
-      color: #333333;
-      text-decoration: underline;
-    }
-    amp-img, amp-youtube {
-      margin-top: 30px;
-    }
-    figure {
-      margin: 0;
-      padding: 0 0 30px;
-    }
-    figcaption {
-      font-weight: 400;
-      font-style: italic;
-      font-size: 16px;
-      line-height: 1.3;
-      color: #666665;
-      outline: 0;
-      z-index: 300;
-      text-align: center;
-    }
-    hr {
-      border: 0;
-      padding: 0;
-      display: block;
-      width: 15%;
-      margin: 30px auto;
-      border: 0px solid #dddddd;
-      border-top: 1px solid #dddddd;
-    }
-    blockquote {
-      margin: 0 0 30px;
-      margin-left: -26px;
-      border-left: 3px solid #57ad68;
-      padding-left: 20px;
-      p {
-        letter-spacing: 0.01rem;
-        font-weight: 400;
-        mborder-left: 3px solid #57ad68;
-        mpadding-left: 20px;
-        mmargin-left: -26px;
-        padding-bottom: 3px;
-      }
-    }
-    ul, ol {
-      padding: 0 0 30px;
-      margin: 0;
-    }
-    li {
-      padding: 0;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 23px;
-      line-height: 30px;
-      margin-left: 30px;
-      margin-bottom: 12px;
-      padding-top: 2px;
-      p {
-        padding: 0 0 golden-ratio(1rem, 1);
-      }
-    }
-    ol li {
-      list-style-type: decimal;
-    }
-  }
-  .bottom-teaser {
-    padding: 50px 0 0 0;
-    font-family: $font-sans;
-    hr {
-      border: 0;
-      padding: 0;
-      display: block;
-      width: 15%;
-      margin: 16px 0 16px 100px;
-      border: 0px solid #dddddd;
-      border-top: 1px solid #dddddd;
-    }
-    .isLeft {
-      float: left;
-      width: 47%;
-      @include box-sizing(border-box);
-      @include respond-to(800) {
-        width: 100%;
-        padding-bottom: $rs * 2;
-      }
-      .bio {
-        margin-top: 18px;
-        margin-bottom: 18px;
-      }
-      .username {
-        margin-left: 4px;
-        margin-right: 18px;
-        margin-bottom: 18px;
-      }
-      .index-headline {
-        padding-bottom: 32px;
-      }
-      a {
-        color: black;
-        text-decoration: none;
-        &:hover {
-          color: #333333;
-          text-decoration: underline;
-        }
-      }
-      .author-image {
-        display: block;
-        width: 80px;
-        height: 80px;
-        float: left;
-        background-size: cover;
-        border-radius: 100%;
-        text-indent: -9999px;
-      }
-      h4 {
-        font-size: 18px;
-        line-height: 1.1;
-        font-weight: 700;
-        padding: 0;
-        margin: 0;
-        padding-left: 100px;
-      }
-      p {
-        font-size: 14px;
-        line-height: 1.3;
-        font-weight: 400;
-        padding: 0;
-        margin: 0;
-        padding-left: 100px;
-        &.published {
-          color: #999999;
-        }
-      }
-    }
-    .isRight {
-      float: right;
-      width: 47%;
-      @include box-sizing(border-box);
-      @include respond-to(800) {
-        width: 100%;
-      }
+button, html input[type=button]
+  -webkit-appearance: button
+  cursor: pointer
 
-      .index-headline {
-        padding-bottom: 32px;
-      }
-      .site-footer {
-        margin: 0;
-        padding: 0;
-        color: #333333;
-        text-align: left;
-        font-size: 14px;
-        line-height: 1.3;
-        color: #999999;
-        a {
-          color: #333333;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-        .poweredby {
-          display: block;
-          padding-bottom: 18px;
-          font-weight: 700;
-          color: #333333;
-        }
-      }
-    }
-  }
-}
+input
+  &[type=reset], &[type=submit]
+    -webkit-appearance: button
+    cursor: pointer
 
-.share {
-  text-align: right;
-  padding: 20px 0 0;
-  a {
-    text-decoration: none;
-    color: #bbbbbb;
-    padding-left: 12px;
-    .hidden {
-      display: none;
-    }
-    &:hover {
-      color: #333333;
-    }
-  }
-}
+button[disabled], html input[disabled]
+  cursor: default
+
+button::-moz-focus-inner
+  border: 0
+  padding: 0
+
+input
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+  line-height: normal
+  &[type=checkbox], &[type=radio]
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    padding: 0
+  &[type=number]
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+      height: auto
+  &[type=search]
+    -webkit-appearance: textfield
+    -webkit-box-sizing: content-box
+    box-sizing: content-box
+    &::-webkit-search-cancel-button, &::-webkit-search-decoration
+      -webkit-appearance: none
+
+fieldset
+  border: 1px solid silver
+  margin: 0 2px
+  padding: .35em .625em .75em
+
+legend
+  border: 0
+  padding: 0
+
+textarea
+  overflow: auto
+
+optgroup
+  font-weight: 700
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+*, td, th
+  padding: 0
+
+*
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  margin: 0
+
+.s-grid-top
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+
+.s-grid-bottom, .s-grid-top
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
+  flex-direction: row
+
+.s-grid-bottom
+  -webkit-box-align: end
+  -ms-flex-align: end
+  align-items: flex-end
+
+.s-grid-center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
+  flex-direction: row
+
+.s-grid-stretch
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
+  flex-direction: row
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
+  align-items: stretch
+
+.s-grid-justify-center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+
+.s-grid-justify-start
+  -webkit-box-pack: start
+  -ms-flex-pack: start
+  justify-content: flex-start
+
+.s-grid-justify-end
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: flex-end
+
+.s-grid-row
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
+  flex-direction: row
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  -webkit-box-orient: horizontal
+
+.s-grid-row-reverse
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: reverse
+  -ms-flex-direction: row-reverse
+  flex-direction: row-reverse
+
+.s-grid-column
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  -webkit-box-orient: vertical
+
+.s-grid-column-reverse
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  -webkit-box-orient: vertical
+  -webkit-box-direction: reverse
+  -ms-flex-direction: column-reverse
+  flex-direction: column-reverse
+
+@media screen and (min-width: 0rem)
+  .s-grid-sm-1 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-2 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-3 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-4 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-5 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-6 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-7 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-8 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-9 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-10 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-11 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-sm-12 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+
+@media screen and (min-width: 40rem)
+  .s-grid-md-1 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-2 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-3 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-4 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-5 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-6 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-7 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-8 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-9 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-10 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-11 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-md-12 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+
+@media screen and (min-width: 75rem)
+  .s-grid-lg-1 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-2 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-3 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-4 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-5 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-6 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-7 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-8 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-9 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-10 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-11 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-lg-12 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+
+@media screen and (min-width: 90rem)
+  .s-grid-xlg-1 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-2 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-3 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-4 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-5 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-6 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-7 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-8 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-9 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-10 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-11 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xlg-12 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+
+@media screen and (min-width: 120rem)
+  .s-grid-xxlg-1 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-2 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-3 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-4 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-5 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-6 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-7 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-8 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-9 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-10 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-11 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-xxlg-12 > [class~=s-grid-cell]
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+
+.s-grid-cell-top
+  -ms-flex-item-align: start
+  align-self: flex-start
+
+.s-grid-cell-bottom
+  -ms-flex-item-align: end
+  align-self: flex-end
+
+.s-grid-cell-center
+  -ms-flex-item-align: center
+  align-self: center
+
+@media screen and (min-width: 0rem)
+  .s-grid-cell-sm-1
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-1
+    margin-left: calc(100% * .083333333333333 + 0.625rem) !important
+  .s-grid-cell-sm-2
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-2
+    margin-left: calc(100% * .166666666666667 + 0.625rem) !important
+  .s-grid-cell-sm-3
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-3
+    margin-left: calc(100% * .25 + 0.625rem) !important
+  .s-grid-cell-sm-4
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-4
+    margin-left: calc(100% * .333333333333333 + 0.625rem) !important
+  .s-grid-cell-sm-5
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-5
+    margin-left: calc(100% * .416666666666667 + 0.625rem) !important
+  .s-grid-cell-sm-6
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-6
+    margin-left: calc(100% * .5 + 0.625rem) !important
+  .s-grid-cell-sm-7
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-7
+    margin-left: calc(100% * .583333333333333 + 0.625rem) !important
+  .s-grid-cell-sm-8
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-8
+    margin-left: calc(100% * .666666666666667 + 0.625rem) !important
+  .s-grid-cell-sm-9
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-9
+    margin-left: calc(100% * .75 + 0.625rem) !important
+  .s-grid-cell-sm-10
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-10
+    margin-left: calc(100% * .833333333333333 + 0.625rem) !important
+  .s-grid-cell-sm-11
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-11
+    margin-left: calc(100% * .916666666666667 + 0.625rem) !important
+  .s-grid-cell-sm-12
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-sm-12
+    margin-left: calc(100% * 1 + 0.625rem) !important
+
+@media screen and (min-width: 40rem)
+  .s-grid-cell-md-1
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-1
+    margin-left: calc(100% * .083333333333333 + 0.625rem) !important
+  .s-grid-cell-md-2
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-2
+    margin-left: calc(100% * .166666666666667 + 0.625rem) !important
+  .s-grid-cell-md-3
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-3
+    margin-left: calc(100% * .25 + 0.625rem) !important
+  .s-grid-cell-md-4
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-4
+    margin-left: calc(100% * .333333333333333 + 0.625rem) !important
+  .s-grid-cell-md-5
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-5
+    margin-left: calc(100% * .416666666666667 + 0.625rem) !important
+  .s-grid-cell-md-6
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-6
+    margin-left: calc(100% * .5 + 0.625rem) !important
+  .s-grid-cell-md-7
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-7
+    margin-left: calc(100% * .583333333333333 + 0.625rem) !important
+  .s-grid-cell-md-8
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-8
+    margin-left: calc(100% * .666666666666667 + 0.625rem) !important
+  .s-grid-cell-md-9
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-9
+    margin-left: calc(100% * .75 + 0.625rem) !important
+  .s-grid-cell-md-10
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-10
+    margin-left: calc(100% * .833333333333333 + 0.625rem) !important
+  .s-grid-cell-md-11
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-11
+    margin-left: calc(100% * .916666666666667 + 0.625rem) !important
+  .s-grid-cell-md-12
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-md-12
+    margin-left: calc(100% * 1 + 0.625rem) !important
+
+@media screen and (min-width: 75rem)
+  .s-grid-cell-lg-1
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-1
+    margin-left: calc(100% * .083333333333333 + 0.625rem) !important
+  .s-grid-cell-lg-2
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-2
+    margin-left: calc(100% * .166666666666667 + 0.625rem) !important
+  .s-grid-cell-lg-3
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-3
+    margin-left: calc(100% * .25 + 0.625rem) !important
+  .s-grid-cell-lg-4
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-4
+    margin-left: calc(100% * .333333333333333 + 0.625rem) !important
+  .s-grid-cell-lg-5
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-5
+    margin-left: calc(100% * .416666666666667 + 0.625rem) !important
+  .s-grid-cell-lg-6
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-6
+    margin-left: calc(100% * .5 + 0.625rem) !important
+  .s-grid-cell-lg-7
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-7
+    margin-left: calc(100% * .583333333333333 + 0.625rem) !important
+  .s-grid-cell-lg-8
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-8
+    margin-left: calc(100% * .666666666666667 + 0.625rem) !important
+  .s-grid-cell-lg-9
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-9
+    margin-left: calc(100% * .75 + 0.625rem) !important
+  .s-grid-cell-lg-10
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-10
+    margin-left: calc(100% * .833333333333333 + 0.625rem) !important
+  .s-grid-cell-lg-11
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-11
+    margin-left: calc(100% * .916666666666667 + 0.625rem) !important
+  .s-grid-cell-lg-12
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-lg-12
+    margin-left: calc(100% * 1 + 0.625rem) !important
+
+@media screen and (min-width: 90rem)
+  .s-grid-cell-xlg-1
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-1
+    margin-left: calc(100% * .083333333333333 + 0.625rem) !important
+  .s-grid-cell-xlg-2
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-2
+    margin-left: calc(100% * .166666666666667 + 0.625rem) !important
+  .s-grid-cell-xlg-3
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-3
+    margin-left: calc(100% * .25 + 0.625rem) !important
+  .s-grid-cell-xlg-4
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-4
+    margin-left: calc(100% * .333333333333333 + 0.625rem) !important
+  .s-grid-cell-xlg-5
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-5
+    margin-left: calc(100% * .416666666666667 + 0.625rem) !important
+  .s-grid-cell-xlg-6
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-6
+    margin-left: calc(100% * .5 + 0.625rem) !important
+  .s-grid-cell-xlg-7
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-7
+    margin-left: calc(100% * .583333333333333 + 0.625rem) !important
+  .s-grid-cell-xlg-8
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-8
+    margin-left: calc(100% * .666666666666667 + 0.625rem) !important
+  .s-grid-cell-xlg-9
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-9
+    margin-left: calc(100% * .75 + 0.625rem) !important
+  .s-grid-cell-xlg-10
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-10
+    margin-left: calc(100% * .833333333333333 + 0.625rem) !important
+  .s-grid-cell-xlg-11
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-11
+    margin-left: calc(100% * .916666666666667 + 0.625rem) !important
+  .s-grid-cell-xlg-12
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xlg-12
+    margin-left: calc(100% * 1 + 0.625rem) !important
+
+@media screen and (min-width: 120rem)
+  .s-grid-cell-xxlg-1
+    -ms-flex-preferred-size: calc(100% * 0.083333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.083333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-1
+    margin-left: calc(100% * .083333333333333 + 0.625rem) !important
+  .s-grid-cell-xxlg-2
+    -ms-flex-preferred-size: calc(100% * 0.166666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.166666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-2
+    margin-left: calc(100% * .166666666666667 + 0.625rem) !important
+  .s-grid-cell-xxlg-3
+    -ms-flex-preferred-size: calc(100% * 0.25 - 1.25rem)
+    flex-basis: calc(100% * 0.25 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-3
+    margin-left: calc(100% * .25 + 0.625rem) !important
+  .s-grid-cell-xxlg-4
+    -ms-flex-preferred-size: calc(100% * 0.333333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.333333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-4
+    margin-left: calc(100% * .333333333333333 + 0.625rem) !important
+  .s-grid-cell-xxlg-5
+    -ms-flex-preferred-size: calc(100% * 0.416666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.416666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-5
+    margin-left: calc(100% * .416666666666667 + 0.625rem) !important
+  .s-grid-cell-xxlg-6
+    -ms-flex-preferred-size: calc(100% * 0.5 - 1.25rem)
+    flex-basis: calc(100% * 0.5 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-6
+    margin-left: calc(100% * .5 + 0.625rem) !important
+  .s-grid-cell-xxlg-7
+    -ms-flex-preferred-size: calc(100% * 0.583333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.583333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-7
+    margin-left: calc(100% * .583333333333333 + 0.625rem) !important
+  .s-grid-cell-xxlg-8
+    -ms-flex-preferred-size: calc(100% * 0.666666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.666666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-8
+    margin-left: calc(100% * .666666666666667 + 0.625rem) !important
+  .s-grid-cell-xxlg-9
+    -ms-flex-preferred-size: calc(100% * 0.75 - 1.25rem)
+    flex-basis: calc(100% * 0.75 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-9
+    margin-left: calc(100% * .75 + 0.625rem) !important
+  .s-grid-cell-xxlg-10
+    -ms-flex-preferred-size: calc(100% * 0.833333333333333 - 1.25rem)
+    flex-basis: calc(100% * 0.833333333333333 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-10
+    margin-left: calc(100% * .833333333333333 + 0.625rem) !important
+  .s-grid-cell-xxlg-11
+    -ms-flex-preferred-size: calc(100% * 0.916666666666667 - 1.25rem)
+    flex-basis: calc(100% * 0.916666666666667 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-11
+    margin-left: calc(100% * .916666666666667 + 0.625rem) !important
+  .s-grid-cell-xxlg-12
+    -ms-flex-preferred-size: calc(100% * 1 - 1.25rem)
+    flex-basis: calc(100% * 1 - 1.25rem)
+    min-width: 0
+    margin: .625rem
+  .s-grid-cell-offset-xxlg-12
+    margin-left: calc(100% * 1 + 0.625rem) !important
+
+@font-face
+  font-family: GT Walsheim
+  src: url(/fonts/gt-walsheim-regular-web.ttf)
+  font-weight: 400
+  font-style: normal
 
 
-pre,
-code {
-  font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff;
-}
+@font-face
+  font-family: GT Walsheim
+  src: url(/fonts/gt-walsheim-bold-web.ttf)
+  font-weight: 700
+  font-style: normal
 
-code {
-  padding: 1px 5px;
-}
 
-pre {
-  padding: 8px 12px;
-  overflow-x: scroll;
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
+h1, h2, h3, h4, h5, h6
+  font-family: GT Walsheim,sans-serif
+  color: #00022c
 
-.pagination .disabled {
-    opacity: 0;
-}
+h1
+  font-size: 90px
+  line-height: 1
+  letter-spacing: -3px
+
+h2
+  font-size: 64px
+  line-height: .9
+  margin: 25px 0
+  letter-spacing: -2px
+
+h3
+  font-size: 28px
+  margin: 15px 0
+  letter-spacing: -1px
+
+p
+  line-height: 28px
+  font-size: 18px
+  &.small
+    font-size: 14px
+
+.centered
+  text-align: center
+
+@media screen and (max-width: 639px)
+  h1
+    font-size: 36px
+  h2
+    font-size: 24px
+    margin: 10px 0
+  h3
+    font-size: 18px
+
+@media screen and (max-width: 992px)
+  h1
+    font-size: 45px
+  h2
+    font-size: 36px
+  h3
+    font-size: 24px
+
+html
+  font-family: Helvetica,sans-serif
+  font-size: 16px
+  -webkit-font-smoothing: antialiased
+  color: #00022c
+
+body, html
+  height: 100%
+
+body
+  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(50%, #751080), to(#4bf6d7))
+  background: linear-gradient(90deg, red, #751080 50%, #4bf6d7)
+  background-attachment: fixed
+
+.page
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  min-height: 100%
+  min-width: 100%
+  background-color: #fff
+  overflow: hidden
+
+a
+  color: #00022c
+  text-decoration: none
+  &:active
+    color: red !important
+
+section
+  position: relative
+
+.space-between
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+.red
+  color: red
+
+.dark-bg
+  background-color: #00022c
+  color: #fff
+  h1, h2, h3, h4, h5, h6, p
+    color: #fff
+  a
+    color: #4bf6d7
+
+.not-bold
+  font-weight: 400
+  font-family: Helvetica,sans-serif
+
+.img-wrapper
+  background-color: rgba(0, 2, 44, 0.1)
+  position: relative
+  img, video
+    display: block
+  img
+    width: 100%
+
+video
+  width: 100%
+  height: 100%
+
+.video-center
+  position: absolute
+  left: 50%
+  top: 50%
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+
+.video-overlay
+  background: rgba(0, 2, 44, 0.4)
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+.btn
+  position: relative
+  background: red
+  border-radius: 100px
+  font: 18px Helvetica
+  letter-spacing: .75px
+  margin: 0
+  padding: 15px 30px
+  display: inline-block
+  color: #fff !important
+  &:active
+    color: #fff !important
+    background-color: #b30000
+    top: 3px
+  &.btn-black
+    color: #fff
+    background: #00022c
+    &:active
+      color: #fff !important
+      background-color: #000
+  &.btn-teal
+    background: #4bf6d7
+    color: #00022c !important
+    &:active
+      color: #00022c !important
+      background-color: #0ce9c1
+
+.label
+  position: absolute
+  top: 20px
+  right: 20px
+  background: #4bf6d7
+  font-family: Andale Mono,Menlo,Monaco,Consolas,Courier New,monospace
+  font-weight: 900
+  font-size: 10px
+  color: #00022c
+  letter-spacing: 1.4px
+  padding: 5px 10px
+  text-transform: uppercase
+
+.badge
+  background-size: contain !important
+  width: 200px
+  height: 60px
+  display: inline-block
+  margin: 0 auto
+  margin-right: 25px
+  &.ios
+    background: url(/assets/images/ios-appstore-badge.svg) no-repeat
+  &.android
+    background: url(/assets/images/google-play-badge.png) no-repeat
+
+.links
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    margin-left: 0
+    padding: 0 25px
+    display: inline-block
+  a
+    text-decoration: none
+    color: #00022c
+    font: 700 18px GT Walsheim,sans-serif
+
+@media screen and (max-width: 639px)
+  .no-mobile
+    display: none
+  .label
+    font-size: 9px
+  .btn
+    font-size: 12px
+    padding: 10px 15px
+  .badges
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    width: 100%
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    .badge
+      -webkit-box-flex: 1
+      -ms-flex: 1
+      flex: 1
+      margin: 0
+      width: calc(50% - 15px)
+      &:first-child
+        margin-right: 10px
+
+header
+  padding-top: 50px
+  .logo img
+    height: 85px
+  .links
+    -ms-flex-item-align: center
+    align-self: center
+    li
+      position: relative
+    a
+      font-family: Helvetica,sans-serif
+      font-weight: 400
+      &.active
+        border-bottom: 1px solid red
+        padding-bottom: 3px
+      &.has-badge:not([data-after=""]):after
+        content: attr(data-after)
+        position: absolute
+        background: red
+        height: 20px
+        top: -13px
+        right: 5px
+        width: 20px
+        text-align: center
+        line-height: 20px
+        font-size: 14px
+        border-radius: 50%
+        color: #fff
+  .hiring-badge
+    font-family: Andale Mono,Menlo,Monaco,Consolas,Courier New,monospace
+    text-decoration: none
+    &:active, &:visited
+      color: inherit
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      -webkit-animation: a 1s infinite
+      animation: a 1s infinite
+      -webkit-animation-delay: .5s
+      animation-delay: .5s
+      li:nth-child(2n)
+        -webkit-animation: a 1s infinite
+        animation: a 1s infinite
+
+@media screen and (max-width: 639px)
+  header
+    .links
+      li
+        padding: 0 13px
+      a
+        font-size: 14px
+        &.has-badge:not([data-after=""]):after
+          top: -10px
+          right: 0
+          height: 15px
+          width: 15px
+          line-height: 15px
+          font-size: 10px
+    &.s-grid-row
+      padding-top: 20px
+      .s-grid-cell-md-10
+        width: 100%
+        margin: 0 20px
+    .logo img
+      height: 42px
+    .hiring-badge li
+      font-size: 12px
+
+@-webkit-keyframes a
+  0%
+    color: #333
+
+  50%
+    color: red
+
+  to
+    color: #333
+
+
+@keyframes a
+  0%
+    color: #333
+
+  50%
+    color: red
+
+  to
+    color: #333
+
+
+footer
+  -ms-flex-item-align: end
+  align-self: flex-end
+  width: 100%
+  padding: 25px 0
+  -webkit-box-shadow: 0 -0.5px 0 rgba(0, 1, 17, 0.2)
+  box-shadow: 0 -0.5px 0 rgba(0, 1, 17, 0.2)
+  .s-grid-cell-sm-10
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+  .links
+    -webkit-box-flex: 1
+    -ms-flex: 1
+    flex: 1
+    margin: 0 0 0 -25px
+  .social
+    -webkit-box-flex: unset
+    -ms-flex: unset
+    flex: unset
+    margin: 0 0 0 -10px
+    li
+      padding: 0 10px
+  .made-in
+    color: red
+    font: 14px Andale Mono,Menlo,Monaco,Consolas,Courier New,monospace
+    text-transform: uppercase
+
+@media screen and (max-width: 992px)
+  footer
+    .s-grid-cell-sm-10
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+    .links
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      margin: 0
+      a
+        font-size: 12px
+      li
+        -webkit-box-flex: 1
+        -ms-flex: 1
+        flex: 1
+        padding: 0 10px
+    .social
+      margin-top: 25px
+      li
+        padding: 0 15px
+
+@media screen and (max-width: 321px)
+  footer .links:not(.social)
+    a
+      font-size: 10px
+    li
+      padding: 0 8px
+
+.home p
+  margin: 0
+  margin-bottom: 60px
+
+.main h1
+  margin: 100px 0 200px
+
+.news, .panels
+  padding: 60px 0
+
+.news .h2, .panels .h2
+  white-space: nowrap
+  font-size: 72px
+  margin-bottom: 37px
+
+.news p, .panels p
+  font-size: 20px
+  letter-spacing: .75px
+  line-height: 28px
+
+.subscribe
+  z-index: 1
+  position: absolute
+  top: 20px
+  right: 20px
+
+.news
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  overflow: hidden
+  min-height: 56.25vw
+  h2, p
+    color: #fff
+  .label, .s-grid-cell-md-5
+    z-index: 1
+  video
+    width: auto
+    height: auto
+  .video-center
+    min-width: 100%
+    min-height: 100%
+
+.panels
+  padding: 150px 0
+
+.panels-player-cell
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: flex-end
+
+.panels-text
+  margin-top: 150px
+
+.panels-player
+  position: relative
+  height: 763px
+  width: 424px
+  .panels-player-pane
+    position: absolute
+    width: 384px
+    height: 683px
+    &:first-child
+      background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(82%, #01032c))
+      background-image: linear-gradient(-180deg, red, #01032c 82%)
+      z-index: 1
+    &:nth-child(2)
+      overflow: hidden
+      z-index: 3
+      top: 20px
+      left: 20px
+    &:nth-child(3)
+      background: #4bf6d7
+      z-index: 2
+      top: 40px
+      left: 40px
+
+@media screen and (max-width: 639px)
+  .main h1
+    margin: 65px 0
+  .home section
+    padding: 30px !important
+  .news h2, .panels h2
+    margin-bottom: 25px
+  .news p, .panels p
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 30px
+  .news .btn, .panels .btn
+    font-size: 14px
+  .news
+    height: 100vh
+    max-height: 177.77778vw
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    .s-grid-row
+      -ms-flex-item-align: end
+      align-self: flex-end
+      margin-bottom: 50px
+  .panels .s-grid-row div
+    &:first-child
+      -webkit-box-ordinal-group: 3
+      -ms-flex-order: 2
+      order: 2
+    &:last-child
+      -webkit-box-ordinal-group: 2
+      -ms-flex-order: 1
+      order: 1
+  .panels-player-cell
+    margin-top: 30px
+  .panels-player
+    position: relative
+    width: calc(100vw - 40px)
+    height: calc(1.777777777777778 * (100vw - 40px))
+    .panels-player-pane
+      position: absolute
+      width: calc(100vw - 100px)
+      height: calc(1.777777777777778 * (100vw - 100px))
+  .panels-text
+    margin-top: -25px
+
+.jobs
+  h1
+    margin-bottom: 140px
+  h2
+    white-space: nowrap
+  p.small
+    line-height: 20px
+  .peace
+    width: 100px
+  .jobs-header
+    margin: 20px 0
+  .jobs-images
+    padding: 0 10px
+  .jobs-mission
+    margin: 120px 0
+  .jobs-company
+    margin-bottom: 120px
+  .jobs-benefits
+    margin-bottom: 180px
+  .jobs-culture
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+  .jobs-journalism, .jobs-tech
+    padding-top: 60px
+    padding-bottom: 60px
+  .jobs-list
+    list-style-type: none
+    padding: 0
+    li
+      margin-bottom: 60px
+      a
+        color: #4bf6d7
+      .btn
+        margin-top: 20px
+
+.job
+  margin: 40px 0
+  p.small
+    width: 200px
+  .job-content
+    h3
+      margin-top: 50px
+    p
+      margin-bottom: 20px
+    ul li
+      margin-left: 1em
+      margin-bottom: 10px
+      line-height: 1.6
+      &:last-child
+        margin-bottom: 20px
+  .job-title
+    margin: 0 0 25px
+  .btn
+    margin-top: 20px
+
+@media screen and (max-width: 639px)
+  .jobs
+    h1
+      margin-bottom: 60px
+    .jobs-header, .jobs-images, .jobs-journalism, .jobs-mission, .jobs-tech
+      padding-left: 20px
+      padding-right: 20px
+    .jobs-mission
+      margin: 60px 0
+    .jobs-images
+      .img-wrapper:first-child
+        margin-bottom: 20px
+      .label
+        left: 20px
+        top: 20px
+    .jobs-company
+      padding: 0 10px
+      margin-bottom: 60px
+    .jobs-culture div
+      &:first-child
+        -webkit-box-ordinal-group: 3
+        -ms-flex-order: 2
+        order: 2
+      &:last-child
+        -webkit-box-ordinal-group: 2
+        -ms-flex-order: 1
+        order: 1
+    .jobs-list li:first-child
+      margin-top: 30px
+  .job
+    padding-left: 20px
+    padding-right: 20px
+    .job-meta
+      margin-bottom: 40px
+
+.contact
+  -webkit-box-flex: 1
+  -ms-flex: 1 0 auto
+  flex: 1 0 auto
+  padding-bottom: 100px
+  .contact-list
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    margin-top: 15px
+    margin-bottom: 45px
+    .contact-entry
+      -webkit-box-flex: 1
+      -ms-flex: 1
+      flex: 1
+      text-align: center
+  .map
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    height: 400px
+    background-color: rgba(0, 2, 44, 0.1)
+    background-image: url(/assets/images/office-pano.jpg)
+    background-position: 50%
+    background-size: cover
+    margin: 50px 0
+
+@media screen and (max-width: 992px)
+  .contact .contact-list
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    margin-top: 50px
+    .contact-entry
+      margin-bottom: 50px
+
+.error
+  -webkit-box-flex: 1
+  -ms-flex: 1 0 auto
+  flex: 1 0 auto
+  .main
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+  h1
+    display: inline-block
+    color: transparent
+    background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(50%, #751080), to(#4bf6d7))
+    background-image: linear-gradient(90deg, red, #751080 50%, #4bf6d7)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-animation: b 5s ease infinite
+    animation: b 5s ease infinite
+    background-size: 200% 200%
+
+@-webkit-keyframes b
+  0%
+    background-position: 0 50%
+
+  50%
+    background-position: 100% 50%
+
+  to
+    background-position: 0 50%
+
+
+@keyframes b
+  0%
+    background-position: 0 50%
+
+  50%
+    background-position: 100% 50%
+
+  to
+    background-position: 0 50%
