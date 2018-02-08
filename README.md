@@ -280,13 +280,13 @@ MIT. See LICENSE file in repo.
 
 ##To do
 
-[ ] Edit condition into /_includes/JB/heading.html
-[ ] Continue Perfectionate the /_includes/blocks/ahead.html
-[ ] Create the 3 column layout validated in amp for the /blog.html layout
-[ ] Continue the single post layout with two columns 
-[ ] Put disqus into posts 
-[ ] Integrate mailchimp
-[ ] Make a sign up form nacked for mailchimp
-[ ] Integrate addthis
-[ ] Integrate hellobar (eventually)
-[ ] Work whit the menu
+- [ ] Edit condition into /_includes/JB/heading.html
+- [ ] Continue Perfectionate the /_includes/blocks/ahead.html
+- [ ] Create the 3 column layout validated in amp for the /blog.html layout
+- [ ] Continue the single post layout with two columns 
+- [ ] Put disqus into posts 
+- [ ] Integrate mailchimp
+- [ ] Make a sign up form nacked for mailchimp
+- [ ] Integrate addthis
+- [ ] Integrate hellobar (eventually)
+- [ ] Work whit the menu
