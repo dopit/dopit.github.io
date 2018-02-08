@@ -14,6 +14,7 @@
 {% endif %}
 
 {% seo %}
+<meta property="og:type"   content="{% if page.type %}{{ page.type }}{% else %}website{% endif %}" /> 
 
 <!-- CSS loaded by the children page -->
 {% if page.css %}<link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/css/{{ page.css }}" />{% endif %}
