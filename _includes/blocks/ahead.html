@@ -1,8 +1,8 @@
 <!-- Hero -->
 <div class="travel-hero-bg absolute col-12">
-    <amp-img class="travel-hero-bg-img absolute" src="/assets/images/hero-2.jpg" height="80vmax" noloading=""></amp-img>
-    <amp-img class="travel-hero-bg-img absolute" src="/assets/images/hero-3.jpg" height="80vmax" noloading=""></amp-img>
-    <amp-img class="travel-hero-bg-img absolute" src="/assets/images/hero-1.jpg" height="80vmax" noloading=""></amp-img>
+    <amp-img class="travel-hero-bg-img absolute" src="{{ page.carousel1 }}" height="80vmax" noloading=""></amp-img>
+    <amp-img class="travel-hero-bg-img absolute" src="{{ page.carousel2 }}" height="80vmax" noloading=""></amp-img>
+    <amp-img class="travel-hero-bg-img absolute" src="{{ page.carousel3 }}" height="80vmax" noloading=""></amp-img>
 </div>
 
 <section class="travel-hero relative">
@@ -62,7 +62,7 @@
           </label>
         </div>
 
-        <a href="travel-results.amp" class="ampstart-btn travel-input-big rounded center bold white block col-12" on="
+        <a href="{{ page.button-link }}" class="ampstart-btn travel-input-big rounded center bold white block col-12" on="
             tap:AMP.setState({
                 ui_reset: false,
                 ui_filterPane: false,
@@ -82,7 +82,7 @@
                 fields_sort_edited: false,
             })
           ">
-          Find Adventures & Tours
+          {{ page.button-text }}
         </a>
       <!--/ Search Form -->
       <a class="travel-hero-discover block center mx-auto mt1 md-hide lg-hide" on="tap:travel-landing-content.scrollTo">
@@ -115,7 +115,7 @@
   <div class="max-width-3 mx-auto px1 md-px2">
     <div class="flex justify-between items-center">
       <header>
-        <h2 class="travel-discover-heading bold line-height-2">{{ page.subtitle }}<br class="md-hide lg-hide"> Adventures</h2>
+        <h2 class="travel-discover-heading bold line-height-2">{{ page.subtitle }}</h2>
         <div class="travel-discover-subheading h2 xs-hide sm-hide">{{ page.subtitle-text }}</div>
       </header>
 
