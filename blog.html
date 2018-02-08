@@ -30,7 +30,7 @@ text-lg-box: <p class="travel-discover-panel-subheading h3 my1 line-height-2">Th
           <div class="relative travel-results-result">
             {% if post.image %}
             <a class="travel-results-result-link" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" target="_top">
-              <amp-img class="rounded bg-silver mb1 i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout" width="2" height="1" noloading="" layout="responsive" src="{{ post.image }}" srcset="{{ post.image }} 2x, {{ post.image }} 1x"><img decoding="async" class="i-amphtml-fill-content i-amphtml-replaced-content" src="{{ post.image }}"></amp-img>
+              <amp-img class="rounded bg-silver mb1" width="2" height="1" noloading="" layout="responsive" src="{{ post.image }}" srcset="{{ post.image }} 2x, {{ post.image }} 1x"><img decoding="async" class="i-amphtml-fill-content i-amphtml-replaced-content" src="{{ post.image }}"></amp-img>
             </a>
             {% endif %}
             <div class="travel-results-result-like absolute top-0 right-0">
