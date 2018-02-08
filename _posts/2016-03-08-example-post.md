@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ea eam nibh persecuti, partem habemus nominavi
+title: Example post
 description: Ea eam nibh persecuti, partem habemus nominavi
 img: assets/images/activity/discover-electronic-scene.jpg
 image: ../assets/images/activity/discover-electronic-scene.jpg
