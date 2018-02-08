@@ -2,7 +2,10 @@
 <html ⚡ lang="en">
   {% include head.html %}
   <body>
-  
+    {% if site.google.tagmanager_id == true %}
+      {% include JB/tag-manager-body.html %}
+    {% endif %}
+    
     {% comment %}
       {% include header.html %}
     {% endcomment %}

@@ -1,0 +1,14 @@
+{% if site.google.tracking_id %}
+    {% include JB/analytics.html %}
+{% endif %}
+{% if site.google.ad_client %}
+    {% include JB/ad-block.html %}
+{% endif %}
+
+
+
+<!-- CSS loaded by the children page -->
+{% if page.css %}<link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/css/{{ page.css }}" />{% endif %}
+{% if page.custom-head %}
+    {{ page.custom-head }}
+{% endif %}

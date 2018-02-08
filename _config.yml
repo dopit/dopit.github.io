@@ -34,5 +34,17 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 
+# data for jekyll-seo-tags plugins
+social:
+  name: lantoniotrento
+  links:
+    - https://twitter.com/jorigamy
+    - https://www.facebook.com/lantoniotrento
+    - https://www.linkedin.com/in/antoniotrento
+    - https://plus.google.com/u/0/b/114870349902392641766/105909498949786982602
+    - https://github.com/jorigamy/jorigamy.github.io
+    - https://keybase.io/antoniotrento
+
 gems:
   - jekyll-paginate
+  
