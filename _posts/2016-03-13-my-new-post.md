@@ -3,7 +3,7 @@ layout: post
 title: My New Post
 description: Ea eam nibh persecuti, partem habemus nominavi
 img: assets/images/activity/skateboard-around-city.jpg
-image: assets/images/activity/skateboard-around-city.jpg
+image: ../assets/images/activity/skateboard-around-city.jpg
 custom-head:
 type: 'article'
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Ea eam nibh persecuti, partem habemus nominavi
 description: Ea eam nibh persecuti, partem habemus nominavi
 img: assets/images/activity/discover-electronic-scene.jpg
-image: assets/images/activity/discover-electronic-scene.jpg
+image: ../assets/images/activity/discover-electronic-scene.jpg
 custom-head:
 type: 'article'
 ---
