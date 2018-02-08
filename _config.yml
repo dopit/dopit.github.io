@@ -25,7 +25,8 @@ author_image: "/assets/images/author.jpg"
 twitter_username: lantoniotrento
 github_username:  antoniotrento
 
-# Google Analytics
+# Google Analytics WHEN YOU LIKE TO HOST ONLY WITH GOOLE ANALYTICS (This configuration type is more quick in 
+# terms of loading if compared with the combination of tag managet/optimize/analitycs downstairs)
 analytics_id: ""
 
 author :
@@ -40,6 +41,8 @@ author :
   google: https://plus.google.com/u/0/b/114870349902392641766/105909498949786982602
   feedburner :
 
+# WHEN YOU WANT TO HOST WITH THE COMBINATION OF GOOLE TAG MANAGER, ANALYTICS AND OPTIMIZE 
+# (tracking_id, optimize_id, tagmanager_id ARE REQUIRED FIELDS)
 google :
     tracking_id : 'UA-109407288-1' # Id google analitics
     optimize_id : 'GTM-MPKVJB9' # I'id di google optimize per A/B Testing
