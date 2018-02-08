@@ -109,21 +109,23 @@
 </div>
 <!--/ Angles -->
 
-
+{% if page.subtitle %}
 <!-- Discover -->
 <section class="travel-discover py4 mb3 relative">
   <div class="max-width-3 mx-auto px1 md-px2">
     <div class="flex justify-between items-center">
       <header>
         <h2 class="travel-discover-heading bold line-height-2">{{ page.subtitle }}</h2>
-        <div class="travel-discover-subheading h2 xs-hide sm-hide">{{ page.subtitle-text }}</div>
+        {% if page.subtitle-text %}<div class="travel-discover-subheading h2 xs-hide sm-hide">{{ page.subtitle-text }}</div>{% endif %}
       </header>
-
+      {% if page.title-lg-box %}
       <div class="travel-discover-panel travel-shadow-hover px3 py2 ml1 mr3 myn3 xs-hide sm-hide">
         <div class="bold h2 line-height-2 my1">{{ page.title-lg-box }}</div>
-        {{ page.text-lg-box }}
+        {% if page.text-lg-box %}{{ page.text-lg-box }}{% endif %}
       </div>
+      {% endif %}
     </div>
   </div>  
 </section>
 <!--/ Discover -->
+{% endif %}
