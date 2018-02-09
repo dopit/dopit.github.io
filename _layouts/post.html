@@ -7,10 +7,19 @@ layout: default
       <h1 class="post-title">{{ page.title }}</h1>
     </div>
 
-    <section class="post-content">
-      <a name="topofpage"></a>
-      {{content}}
-    </section>
+    <div class="clearfix border">
+        <div class="lg-col lg-col-8 md-col-10 border">
+          <section class="post-content">      
+              {{content}}
+          </section>
+        </div>       
+        <div class="lg-col lg-col-4 xs-hide sm-hide border">
+          SIDEBAR
+        </div>
+    </div>
+
+
+
     <footer class="post-footer">
       <section class="share">
         <a class="icon" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.id }}&text={{page.title | cgi_escape}}&via={{ site.twitter_username }}" target="_blank">
