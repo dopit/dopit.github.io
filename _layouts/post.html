@@ -4,17 +4,17 @@ layout: default
 
 <!-- Hero -->
 <div class="travel-hero-bg absolute col-12">
-    <amp-img class="travel-hero-bg-img absolute" src="{{ page.carousel1 }}" height="80vmax" noloading=""></amp-img>
-    <amp-img class="travel-hero-bg-img absolute" src="{{ page.carousel2 }}" height="80vmax" noloading=""></amp-img>
-    <amp-img class="travel-hero-bg-img absolute" src="{{ page.carousel3 }}" height="80vmax" noloading=""></amp-img>
+    <amp-img class="travel-hero-bg-img absolute" src="{{ post.carousel1 }}" height="80vmax" noloading=""></amp-img>
+    <amp-img class="travel-hero-bg-img absolute" src="{{ post.carousel2 }}" height="80vmax" noloading=""></amp-img>
+    <amp-img class="travel-hero-bg-img absolute" src="{{ post.carousel3 }}" height="80vmax" noloading=""></amp-img>
 </div>
 
 <section class="travel-hero relative">
   <div class="travel-hero-content max-width-3 mx-auto absolute top-0 left-0 right-0 flex self-end items-center">
     <div class="travel-hero-content-inner relative px1 md-px2 flex-auto self-end">
       <header>
-        <h1 class="travel-hero-heading mb2 line-height-1">{{page.title}}</h1>
-        <h2 class="travel-hero-subheading line-height-2 bold xs-hide sm-hide">{{page.description}}</h2>
+        <h1 class="travel-hero-heading mb2 line-height-1">{{post.title}}</h1>
+        <h2 class="travel-hero-subheading line-height-2 bold xs-hide sm-hide">{{post.description}}</h2>
       </header>
       <!-- Search Form -->
       <div class="travel-hero-search">
@@ -66,7 +66,7 @@ layout: default
           </label>
         </div>
 
-        <a href="{{ page.button-link }}" class="ampstart-btn travel-input-big rounded center bold white block col-12" on="
+        <a href="{{ post.button-link }}" class="ampstart-btn travel-input-big rounded center bold white block col-12" on="
             tap:AMP.setState({
                 ui_reset: false,
                 ui_filterPane: false,
@@ -86,7 +86,7 @@ layout: default
                 fields_sort_edited: false,
             })
           ">
-          {{ page.button-text }}
+          {{ post.button-text }}
         </a>
       <!--/ Search Form -->
       <a class="travel-hero-discover block center mx-auto mt1 md-hide lg-hide" on="tap:travel-landing-content.scrollTo">
@@ -113,19 +113,19 @@ layout: default
 </div>
 <!--/ Angles -->
 
-{% if page.subtitle %}
+{% if post.subtitle %}
 <!-- Discover -->
 <section class="travel-discover py4 mb3 relative">
   <div class="max-width-3 mx-auto px1 md-px2">
     <div class="flex justify-between items-center">
       <header>
-        <h2 class="travel-discover-heading bold line-height-2">{{ page.subtitle }}</h2>
-        {% if page.subtitle-text %}<div class="travel-discover-subheading h2 xs-hide sm-hide">{{ page.subtitle-text }}</div>{% endif %}
+        <h2 class="travel-discover-heading bold line-height-2">{{ post.subtitle }}</h2>
+        {% if post.subtitle-text %}<div class="travel-discover-subheading h2 xs-hide sm-hide">{{ post.subtitle-text }}</div>{% endif %}
       </header>
-      {% if page.title-lg-box %}
+      {% if post.title-lg-box %}
       <div class="travel-discover-panel travel-shadow-hover px3 py2 ml1 mr3 myn3 xs-hide sm-hide">
-        <div class="bold h2 line-height-2 my1">{{ page.title-lg-box }}</div>
-        {% if page.text-lg-box %}{{ page.text-lg-box }}{% endif %}
+        <div class="bold h2 line-height-2 my1">{{ post.title-lg-box }}</div>
+        {% if post.text-lg-box %}{{ post.text-lg-box }}{% endif %}
       </div>
       {% endif %}
     </div>
