@@ -6,6 +6,15 @@ img: assets/images/activity/skateboard-around-city.jpg
 image: ../assets/images/activity/skateboard-around-city.jpg
 custom-head:
 type: 'article'
+carousel1: /assets/images/activity/skateboard-around-city.jpg
+carousel2: /assets/images/activity/skateboard-around-city.jpg
+carousel3: /assets/images/activity/skateboard-around-city.jpg
+button-text: Discover
+button-link: https://link.com
+subtitle: Create <br class="md-hide lg-hide">your style
+subtitle-text: Get inspired and Find your style
+title-lg-box: Welcome
+text-lg-box: <p class="travel-discover-panel-subheading h3 my1 line-height-2">This is the best blog in the world, because is structured with the last technology.</p><p class="my1"><a class="travel-link" href="#">Read more</a></p>
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit!
