@@ -2,23 +2,21 @@
 <html ⚡ lang="en">
   {% include head-travel.html %}
   <body>
-    {% if site.google.tagmanager_id == true %}
-      {% include JB/tag-manager-body.html %}
-    {% endif %}  
-    {% comment %}
-      {% include header.html %}
-    {% endcomment %}
-
-    {{ content }}
-
-    {% comment %}
-      {% include footer.html %}
-    {% endcomment %}
-
-    {% comment %}
-        {% include analytics.html %}
-    {% endcomment %}
+      {% if site.google.tagmanager_id == true %}
+        {% include JB/tag-manager-body.html %}
+      {% endif %}
+         
+      
+        
   
-
+      {{ content }}
+      
+        {% include footer.html %}    
+  
+      
+        
+      {% if site.analytics_id %}
+          {% include analytics.html %}
+      {% endif %}
   </body>
 </html>
