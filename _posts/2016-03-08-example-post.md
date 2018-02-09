@@ -6,9 +6,9 @@ img: ../assets/images/activity/discover-electronic-scene.jpg
 image: ../assets/images/activity/discover-electronic-scene.jpg
 custom-head:
 type: 'article'
-carousel1: /assets/images/activity/discover-electronic-scene.jpg
-carousel2: /assets/images/activity/discover-electronic-scene.jpg
-carousel3: /assets/images/activity/discover-electronic-scene.jpg
+carousel1: /assets/images/activity/discover-electronic-scene@2x.jpg
+carousel2: /assets/images/activity/discover-electronic-scene@2x.jpg
+carousel3: /assets/images/activity/discover-electronic-scene@2x.jpg
 button-text: Discover
 button-link: https://link.com
 subtitle: Create <br class="md-hide lg-hide">your style

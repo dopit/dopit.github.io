@@ -6,9 +6,9 @@ img: assets/images/activity/skateboard-around-city.jpg
 image: ../assets/images/activity/skateboard-around-city.jpg
 custom-head:
 type: 'article'
-carousel1: /assets/images/activity/skateboard-around-city.jpg
-carousel2: /assets/images/activity/skateboard-around-city.jpg
-carousel3: /assets/images/activity/skateboard-around-city.jpg
+carousel1: /assets/images/activity/skateboard-around-city@2x.jpg
+carousel2: /assets/images/activity/skateboard-around-city@2x.jpg
+carousel3: /assets/images/activity/skateboard-around-city@2x.jpg
 button-text: Discover
 button-link: https://link.com
 subtitle: Create <br class="md-hide lg-hide">your style
