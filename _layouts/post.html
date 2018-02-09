@@ -19,27 +19,8 @@ layout: default
       <!-- Search Form -->
       <div class="travel-hero-search">        
           <br /><br /><br /><br /><br /><br /><br />
-        <a href="travel-results.amp" class="ampstart-btn travel-input-big rounded center bold white block col-12" on="
-            tap:AMP.setState({
-                ui_reset: false,
-                ui_filterPane: false,
-                query_query: fields_query,
-                fields_query_edited: false,
-                query_departure: fields_departure,
-                fields_departure_edited: false,
-                query_return: fields_return,
-                fields_return_edited: false,
-                query_maxPrice: fields_maxPrice,
-                fields_maxPrice_edited: false,
-                query_city: fields_city,
-                fields_city_edited: false,
-                query_type: fields_type,
-                fields_type_edited: false,
-                query_sort: fields_sort,
-                fields_sort_edited: false,
-            })
-          ">
-          Find Adventures & Tours
+        <a href="{{ page.button-link }}" class="ampstart-btn travel-input-big rounded center bold white block col-12">
+            {{ page.button-text }}
         </a>
       <!--/ Search Form -->
       <a class="travel-hero-discover block center mx-auto mt1 md-hide lg-hide" on="tap:travel-landing-content.scrollTo">
@@ -72,14 +53,14 @@ layout: default
   <div class="max-width-3 mx-auto px1 md-px2">
     <div class="flex justify-between items-center">
       <header>
-        <h2 class="travel-discover-heading bold line-height-2">Discover<br class="md-hide lg-hide"> Adventures</h2>
-        <div class="travel-discover-subheading h2 xs-hide sm-hide">Get inspired and find your next big trip</div>
+        <h2 class="travel-discover-heading bold line-height-2">{{ page.subtitle }}<br class="md-hide lg-hide"> Adventures</h2>
+        <div class="travel-discover-subheading h2 xs-hide sm-hide">{{ page.subtitle-text }}</div>
       </header>
 
       <div class="travel-discover-panel travel-shadow-hover px3 py2 ml1 mr3 myn3 xs-hide sm-hide">
-        <div class="bold h2 line-height-2 my1">From the blog</div>
+        <div class="bold h2 line-height-2 my1">{{ page.title-lg-box }}</div>
         <p class="travel-discover-panel-subheading h3 my1 line-height-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit amet dolor set.
+          {{ page.text-lg-box }}
         </p>
         <p class="my1">
           <a class="travel-link" href="#">Read more</a>
