@@ -51,14 +51,7 @@ google :
     tagmanager_id: 'GTM-5VNXBR4' # id di google tag manager
     ad_client: 'ca-pub-9204963049240271' # id google ADsense (to edit other id's of google ADsense go to /_includes/JB/ads-block-html )
 
-
-# Build settings
-markdown: kramdown
-
-kramdown:
-  parse_block_html: true
-
-# data for jekyll-seo-tags plugins
+# data for jekyll-seo-tags plugin
 social:
   name: lantoniotrento
   links:
@@ -77,6 +70,14 @@ facebook:
  admins: 1010094929028825 #the page ID from https://www.facebook.com/pg/lantoniotrento (page-link), left click about scroll down and find 'Page ID'
  publisher: 1010094929028825 #the page ID from https://www.facebook.com/pg/lantoniotrento (page-link), left click about scroll down and find 'Page ID'
     
+disqus :
+    short_name : jorigamy
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  parse_block_html: true
 
 gems:
   - jekyll-paginate
