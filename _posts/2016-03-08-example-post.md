@@ -27,7 +27,7 @@ Pro hinc copiosae an, ad ius salutandi expetendis. Quo suavitate intellegat fore
 
 <amp-img width="600" height="300" layout="responsive" src="http://lorempixel.com/600/300/people"></amp-img>
 
-Ea ullamcorper intellegebat pri!
+<p class="h3-3d">Ea ullamcorper intellegebat pri!</p>
 
 ### Vix cu alienum evertitur
 
