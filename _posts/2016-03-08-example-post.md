@@ -6,9 +6,9 @@ img: ../assets/images/activity/discover-electronic-scene.jpg
 image: ../assets/images/activity/discover-electronic-scene.jpg
 custom-head:
 type: 'article'
-carousel1: ../assets/images/hero-2.jpg
-carousel2: ../assets/images/hero-3.jpg
-carousel3: ../assets/images/hero-1.jpg
+carousel1: assets/images/hero-2.jpg
+carousel2: assets/images/hero-3.jpg
+carousel3: assets/images/hero-1.jpg
 button-text: Discover
 button-link: https://link.com
 subtitle: Create <br class="md-hide lg-hide">your style
