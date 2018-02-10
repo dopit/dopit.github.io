@@ -19,10 +19,7 @@ text-lg-box: <p class="travel-discover-panel-subheading h3 my1 line-height-2">Th
 
 At labitur probatus eum, qui modo idque partem ne, ea has oratio sanctus cotidieque. Dicta persecuti sit ex. Discere facilis recteque sit no, in eripuit volumus adversarium vim. Ad sed meis nulla accusata. Ex posse accusam maluisset mei, id vix ignota cetero inimicus.
 
-> Nec amet pericula dissentiet...
-
-
-> Nam liber tritani ei, urbanitas tincidunt usu et. Odio voluptua gubergren at cum. An porro mucius tibique nam, cu usu everti dignissim assueverit. Docendi patrioque constituto te sit. Qui lorem soluta ea, commune deserunt sed id. Accusam commune cotidieque his ea. <footer class="footer-quote">Groucho Marx</footer>
+> Erat officiis probatus eam ea, nibh legere insolens ad sit. Nec alii dicam ad, cibo regione per no.
 
 Pro hinc copiosae an, ad ius salutandi expetendis. Quo suavitate intellegat forensibus an. Sonet meliore consetetur te sea, in eam decore utroque, dicat verear et sit. Pro aperiam pertinax splendide id, IUS STET ELEIFEND INTELLEGAM ID.
 
