@@ -3623,6 +3623,7 @@ blockquote {
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-style: italic;
+  z-index: 2;
   &:before {
       content: '\201C';
       position: absolute;
