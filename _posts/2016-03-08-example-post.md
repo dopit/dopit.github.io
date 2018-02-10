@@ -11,7 +11,7 @@ carousel2: /assets/images/activity/discover-electronic-scene@2x.jpg
 carousel3: /assets/images/activity/discover-electronic-scene@2x.jpg
 button-text: Discover
 button-link: https://link.com
-subtitle: Create <br class="md-hide lg-hide">your style
+subtitle: 'Create your style <br class="md-hide lg-hide"> Adventures'
 subtitle-text: Get inspired and Find your style
 title-lg-box: Welcome
 text-lg-box: <p class="travel-discover-panel-subheading h3 my1 line-height-2">This is the best blog in the world, because is structured with the last technology.</p><p class="my1"><a class="travel-link" href="#">Read more</a></p>
