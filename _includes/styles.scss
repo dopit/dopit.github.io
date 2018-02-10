@@ -3609,34 +3609,78 @@ amp-img {
   }
 }
 
-blockquote {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  width: 80%;
-  margin: 100px auto;
-  padding: 50px;
-  text-align: center;
-  font-size: 20px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+
+/* Some vars */
+$background-color: hsl(50, 5, 97);
+$black: hsl(200, 40, 10);
+$white: $background-color;
+$base-font-size: 2.4em;
+$base-line-height: 1.5em;
+
+.brooks {
   position: relative;
-  quotes: "“" "”" "‘" "’";
+  font-family: 'Sanchez', serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-style: italic;
+  &:before {
+      content: '\201C';
+      position: absolute;
+      top: 0.25em;
+      left: -0.15em;
+      color: darken($white, 7%);
+      font-size: 6em;
+      z-index: -1;
+   }
+}
+
+.ludwig {
+  position: relative;
+  padding-left: 1em;
+  border-left: 0.2em solid lighten($black, 40%);
+  font-family: 'Roboto', serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 100;
+  &:before, &:after {
+      content: '\201C';
+      font-family: 'Sanchez';
+      color: lighten($black, 40%);
+   }
+   &:after {
+      content: '\201D';
+   }
+}
+
+.groucho {
+  position: relative;
+  font-family: 'Sanchez', serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  
+  footer {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.6em;
+    font-weight: 700;
+    color: darken($white, 15%);
+    float: right;
+    
+    &:before {
+      content: '\2015';  
+    }
+  }
   &:after {
-    color: #ccc;
-    font-family: Source Sans Pro;
-    content: open-quote;
-    font-size: 80px;
-    position: absolute;
-    left: 50%;
-    bottom: calc(100% - 20px);
-    background: #fff;
-    height: 55px;
-    width: 55px;
-    line-height: normal;
-    text-align: center;
-    transform: translateX(-50%);
-  }
-  p {
-    padding: 20px;
-  }
+      content: '\201D';
+      position: absolute;
+      top: 0.28em;
+      right: 0;
+      font-size: 6em;
+      font-style: italic;
+      color: darken($white, 7%);
+      z-index: -1;
+   }
+}
+
+blockquote {
+  margin-bottom: 3em;
 }
