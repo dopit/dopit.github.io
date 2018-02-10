@@ -3652,13 +3652,13 @@ $base-line-height: 1.5em;
    }
 }
 
-.groucho {
+blockquote {
   position: relative;
   font-family: 'Sanchez', serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
   
-  footer {
+  .footer-quote {
     font-family: 'Noto Sans', sans-serif;
     font-size: 0.6em;
     font-weight: 700;
