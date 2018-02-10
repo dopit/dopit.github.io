@@ -37,8 +37,4 @@ Mea suas vituperatoribus et, virtute corpora quaestio cum ut. Ne solet nostrum c
 
 Ne ius nominavi verterem. Principes voluptaria pro at. Sint mediocrem cum ea, his purto dicat scaevola ad. Per quem magna gubergren id, pri in noluisse salutatus imperdiet. In postea consequat percipitur vis, nam postea commodo lobortis an, ut atqui antiopam eloquentiam eum.
 
-<div class="p4 bg-cover white bg-gray" style="background-image: url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*DZwdGMaeu-rvTroJYui6Uw.jpeg)">
-  <h1>.bg-cover</h1>
-</div>
-
 > Erat officiis probatus eam ea, nibh legere insolens ad sit. Nec alii dicam ad, cibo regione per no. Verear invenire ut usu, nec mazim euripidis in. Molestie placerat id quo, quo dissentias complectitur ex. Ex probatus principes efficiantur pro, possit perfecto ut eum. Vix ei summo perpetua, enim adhuc vix ei, sed in homero delicata periculis. Praesent intellegat qui ne.
