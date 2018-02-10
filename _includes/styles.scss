@@ -3617,7 +3617,7 @@ $white: $background-color;
 $base-font-size: 2em;
 $base-line-height: 1em;
 
-.brooks {
+blockquote {
   position: relative;
   font-family: 'Sanchez', serif;
   font-size: $base-font-size;
@@ -3652,13 +3652,13 @@ $base-line-height: 1em;
    }
 }
 
-blockquote {
+.groucho {
   position: relative;
   font-family: 'Sanchez', serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
   
-  .footer-quote {
+  footer {
     font-family: 'Noto Sans', sans-serif;
     font-size: 0.6em;
     font-weight: 700;
