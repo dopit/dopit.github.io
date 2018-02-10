@@ -21,7 +21,7 @@ At labitur probatus eum, qui modo idque partem ne, ea has oratio sanctus cotidie
 
 > Nec amet pericula dissentiet...
 >
-> Nam liber tritani ei, urbanitas tincidunt usu et. Odio voluptua gubergren at cum. An porro mucius tibique nam, cu usu everti dignissim assueverit. Docendi patrioque constituto te sit. Qui lorem soluta ea, commune deserunt sed id. Accusam commune cotidieque his ea.
+> Nam liber tritani ei, urbanitas tincidunt usu et. Odio voluptua gubergren at cum. An porro mucius tibique nam, cu usu everti dignissim assueverit. Docendi patrioque constituto te sit. Qui lorem soluta ea, commune deserunt sed id. Accusam commune cotidieque his ea. <footer class="footer-quote">Groucho Marx</footer>
 
 Pro hinc copiosae an, ad ius salutandi expetendis. Quo suavitate intellegat forensibus an. Sonet meliore consetetur te sea, in eam decore utroque, dicat verear et sit. Pro aperiam pertinax splendide id, IUS STET ELEIFEND INTELLEGAM ID.
 
