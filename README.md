@@ -281,10 +281,13 @@ MIT. See LICENSE file in repo.
 - [x] Edit condition into /_includes/JB/heading.html
 - [x] Continue Perfectionate the /_includes/blocks/ahead.html
 - [x] Create the 3 column layout validated in amp for the /blog.html layout
-- [ ] Continue the single post layout with two columns 
-- [ ] Put disqus into posts 
+- [x] Continue the single post layout with two columns 
+- [ ] Continue edit css typography single post layout with two columns 
+- [x] Put disqus into posts 
 - [ ] Integrate mailchimp
 - [ ] Make a sign up form nacked for mailchimp
 - [ ] Integrate addthis
 - [ ] Integrate hellobar (eventually)
 - [ ] Work with the menu
+- [ ] Continue edit /includes/blocks/sharing.html by pass params like `{% include blocks/test.html subtitle=page.subtitle `
+- [ ] Integrate a modal script (maybe a timer modal or something)
